@@ -5,7 +5,7 @@
   <artifactId>PatronesDeDiseno</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>mi-proyecto</name>
+  <name>PatronesDeDiseno</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
