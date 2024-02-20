@@ -1,5 +1,6 @@
 package com.ejemplo;
 
+
 public class ArrayList<T> implements IStack <T>{
 
     ArrayList<T> arr = null;
@@ -10,13 +11,12 @@ public class ArrayList<T> implements IStack <T>{
 
     @Override
     public void push(T item) {
-        
+        arr.add(item);
     }
 
     @Override
     public T pop() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'pop'");
+        return arr.remove(arr.size() - 1);
     }
 
     @Override
@@ -27,8 +27,7 @@ public class ArrayList<T> implements IStack <T>{
 
     @Override
     public boolean isEmpty() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
+        return arr.isEmpty();
     }
     
 }
