@@ -24,8 +24,5 @@ public class StackFactory<T> {
             default:
                 return null;
         }
-    }
-
-    
-    
+    }  
 }

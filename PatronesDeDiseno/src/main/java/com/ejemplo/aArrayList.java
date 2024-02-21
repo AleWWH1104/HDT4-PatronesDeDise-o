@@ -1,5 +1,6 @@
 package com.ejemplo;
 import java.util.ArrayList;
+import java.util.EmptyStackException;
 
 public class aArrayList<T> implements IStack <T>{
 
@@ -21,9 +22,10 @@ public class aArrayList<T> implements IStack <T>{
 
     @Override
     public T peek() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'peek'");
-    }
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return arr.get(arr.size() - 1);}
 
     @Override
     public boolean isEmpty() {
