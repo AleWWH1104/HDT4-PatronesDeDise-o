@@ -12,7 +12,13 @@ public class StackFactory<T> {
             case "2":
                 return new Vector<T>();
             case "3":
-                return createLList();
+                System.out.println("Elija el tipo de lista que desea utilizar:");
+                System.out.println("1. Lista simplemente encadenada");
+                System.out.println("2. Lista doblemente encadenada");
+
+                String listType = scanner.nextLine();
+
+                return createLList(String type);
             default:
                 return null;
         }

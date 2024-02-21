@@ -49,9 +49,7 @@ public class Main<T> {
 
         // Si el usuario eligió la opción 3, se le pide que seleccione el tipo de lista.
         if (stackOp.equals("3")) {
-            System.out.println("Elija el tipo de lista que desea utilizar:");
-            System.out.println("1. Lista simplemente encadenada");
-            System.out.println("2. Lista doblemente encadenada");
+            
 
             String listOp = scanner.nextLine();
             IList<Integer> list = stackFactory.createLList(listOp);

@@ -1,11 +1,11 @@
 package com.ejemplo;
+import java.util.ArrayList;
 
+public class aArrayList<T> implements IStack <T>{
 
-public class ArrayList<T> implements IStack <T>{
+    private ArrayList<T> arr = new ArrayList<>();
 
-    ArrayList<T> arr = null;
-
-    public ArrayList(){
+    public aArrayList(){
         arr = new ArrayList<T>();
     }
 
