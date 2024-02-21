@@ -10,26 +10,25 @@ public class vVector<T> implements IStack<T> {
     }
     @Override
     public void push(T item) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'push'");
+
+        vec.addElement(item);
     }
 
     @Override
     public T pop() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'pop'");
+        T e = vec.elementAt(vec.size() - 1);
+        vec.removeElement(vec.size() - 1);
+        return e;
     }
 
     @Override
     public T peek() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'peek'");
+        return vec.elementAt(vec.size() - 1);
     }
 
     @Override
     public boolean isEmpty() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
+        return vec.size()==0;
     }
     
 }
