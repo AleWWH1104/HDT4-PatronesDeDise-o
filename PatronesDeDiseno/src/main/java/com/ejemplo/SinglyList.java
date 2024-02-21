@@ -2,28 +2,47 @@ package com.ejemplo;
 
 public class SinglyList<T> implements IList<T> {
 
+    private class Node<T>{
+
+        public T data;
+        public Node<T> next = null;
+        public Node(T cData){
+            data = cData;
+        }
+    }
+
+    private Node<T> head = null;
+    
+
     @Override
     public void addFirst(T item) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'addFirst'");
+        Node<T> newNode = new Node<>(item);
+        newNode.next = head;
+        head = newNode;
     }
 
     @Override
     public T removeFirst() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'removeFirst'");
+        if (isEmpty()) {
+            throw new UnsupportedOperationException("Lista vacia, no se puede remover nada");
+        }
+
+        T removedData = head.data;
+        head = head.next;
+        return removedData;
     }
 
     @Override
     public T front() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'front'");
+        if (isEmpty()) {
+            throw new UnsupportedOperationException("Lista vacia, no se puede remover nada");
+        }
+        return head.data;
     }
 
     @Override
-    public boolean isEmpty() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
+    public boolean isEmpty(){
+        return (head == null);
     }
     
     

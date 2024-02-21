@@ -83,7 +83,7 @@ public class InfixConvert<T> {
     
     public static void main(String[] args) {
         InfixConvert<Character> converter = new InfixConvert<>();
-        String infixExpression = "(a+b)*c+(b+d)";
+        String infixExpression = "(1+2)*7";
         String postfixExpression = converter.infixToPostfix(infixExpression);
         System.out.println("Infix: " + infixExpression);
         System.out.println("Postfix: " + postfixExpression);
