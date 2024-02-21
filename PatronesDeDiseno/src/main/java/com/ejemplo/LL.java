@@ -1,11 +1,12 @@
 package com.ejemplo;
 
-public class Lista<T> implements IStack<T> {
+public class LL<T> implements IStack<T> {
 
-    Lista<T> list = null;
+    IList<T> lista = null;
 
-    public Lista(){
-        list = new Lista<T>();
+    public LL(String type){
+        LLFactory<T> tmp = new LLFactory<>();
+        lista = tmp.createLList(type);
     }
 
     @Override
@@ -29,7 +30,7 @@ public class Lista<T> implements IStack<T> {
     @Override
     public boolean isEmpty() {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
+        throw new UnsupportedOperationException("Unimplemented method 'pop'");
+        
     }
-    
 }

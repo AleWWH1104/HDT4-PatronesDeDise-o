@@ -1,10 +1,11 @@
 package com.ejemplo;
+import java.util.Vector;
 
-public class Vector<T> implements IStack<T> {
+public class vVector<T> implements IStack<T> {
 
     Vector<T> vec = null;
 
-    public Vector(){
+    public vVector(){
         vec = new Vector<T>();
     }
     @Override

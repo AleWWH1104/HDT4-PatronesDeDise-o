@@ -27,7 +27,7 @@ public class aArrayList<T> implements IStack <T>{
 
     @Override
     public boolean isEmpty() {
-        return arr.isEmpty();
+        return (arr.size() == 0);
     }
     
 }
