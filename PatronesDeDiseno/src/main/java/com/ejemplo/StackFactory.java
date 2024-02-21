@@ -8,7 +8,7 @@ public class StackFactory<T> {
     public IStack<T> createStack(String type) {
         switch (type) {
             case "1":
-                return new ArrayList<T>();
+                return new aArrayList<T>();
             case "2":
                 return new Vector<T>();
             case "3":
@@ -18,7 +18,7 @@ public class StackFactory<T> {
 
                 String listType = scanner.nextLine();
 
-                return createLList(String type);
+                return createLList(listType);
             default:
                 return null;
         }
