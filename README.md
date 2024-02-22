@@ -28,13 +28,12 @@ El diagrama UML muestra las clases utilizadas para la implementación de la pila
 
 Implementación de la Pila y la Lista
 Pila
-Se proporciona una interfaz de pila, una clase abstracta y tres implementaciones con las siguientes opciones:
+Se proporciona una interfaz de pila e implementaciones con las siguientes opciones:
 
 ArrayList
 Vector
 Lista (seleccionando esta opción, se debe especificar la implementación de lista deseada)
-Lista
-Se proporciona una interfaz de lista, una clase abstracta y dos implementaciones con las siguientes opciones:
+Se proporciona una interfaz de lista y dos implementaciones con las siguientes opciones:
 
 Simplemente Enlazada
 Doblemente Enlazada
