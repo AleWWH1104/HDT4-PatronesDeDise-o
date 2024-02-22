@@ -1,9 +1,19 @@
 package com.ejemplo;
-
+/**
+ * Clase que implementa una pila utilizando una lista enlazada.
+ *
+ * @param <T> el tipo de elementos que contendrá la pila
+ */
 public class LL<T> implements IStack<T> {
 
     IList<T> lista = null;
 
+    /**
+     * Constructor de la clase LL.
+     * Inicializa la lista enlazada según el tipo especificado.
+     *
+     * @param type el tipo de lista enlazada a utilizar ("sl" para singly list, "dl" para doubly list)
+     */
     public LL(String type) {
         LLFactory<T> tmp = new LLFactory<>();
         lista = tmp.createLList(type);

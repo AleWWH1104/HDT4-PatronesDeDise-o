@@ -1,11 +1,19 @@
 package com.ejemplo;
 import java.util.ArrayList;
 import java.util.EmptyStackException;
-
+/**
+ * Implementación de una pila utilizando un ArrayList.
+ *
+ * @param <T> tipo de elementos que contendrá la pila
+ */
 public class aArrayList<T> implements IStack <T>{
 
     private ArrayList<T> arr = new ArrayList<>();
 
+    /**
+     * Constructor de la clase aArrayList.
+     * Inicializa un nuevo ArrayList para almacenar elementos.
+     */
     public aArrayList(){
         arr = new ArrayList<T>();
     }

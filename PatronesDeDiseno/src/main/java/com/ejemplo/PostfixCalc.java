@@ -2,6 +2,11 @@ package com.ejemplo;
 
 import java.util.EmptyStackException;
 
+/**
+ * Clase para evaluar expresiones postfix utilizando una pila.
+ *
+ * @param <T> el tipo de elementos que contendrá la pila
+ */
 public class PostfixCalc<T extends Number> {
     private static PostfixCalc instance = null;
 

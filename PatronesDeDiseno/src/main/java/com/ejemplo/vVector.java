@@ -1,11 +1,15 @@
 package com.ejemplo;
-
+/**
+ * Implementación de una pila utilizando un vector.
+ *
+ * @param <T> el tipo de elementos que contendrá la pila
+ */
 public class vVector<T> implements IStack<T> {
 
     private static final int DEFAULT_CAPACITY = 10;
     private Object[] vector;
     private int size;
-
+    
     public vVector() {
         vector = new Object[DEFAULT_CAPACITY];
         size = 0;
@@ -40,6 +44,10 @@ public class vVector<T> implements IStack<T> {
         return size == 0;
     }
 
+    /**
+     * Asegura que el vector tiene suficiente capacidad para agregar elementos.
+     * Si no, aumenta su capacidad.
+     */
     private void ensureCapacity() {
         if (size == vector.length) {
             int newCapacity = vector.length * 2;

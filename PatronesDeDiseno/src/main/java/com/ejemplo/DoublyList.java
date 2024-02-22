@@ -1,6 +1,15 @@
 package com.ejemplo;
-
+/**
+ * Implementación de una lista doblemente enlazada.
+ *
+ * @param <T> el tipo de elementos que contendrá la lista
+ */
 public class DoublyList<T> implements IList<T> {
+    /**
+     * Clase interna que representa un nodo de la lista doblemente enlazada.
+     *
+     * @param <T> el tipo de elemento que contendrá el nodo
+     */
     private class Node<T>{
         public T lista;
         public Node<T> next = null;

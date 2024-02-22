@@ -2,6 +2,11 @@ package com.ejemplo;
 
 import java.util.Stack;
 
+/**
+ * Clase para convertir expresiones infix a postfix.
+ *
+ * @param <T> el tipo de elementos de la pila
+ */
 public class InfixConvert<T> {
     
     private Stack<T> stack;
@@ -11,6 +16,12 @@ public class InfixConvert<T> {
         
     }
 
+    /**
+     * Convierte una expresión infix a postfix.
+     *
+     * @param infixExpression la expresión infix a convertir
+     * @return la expresión en formato postfix
+     */
     public String infixToPostfix(String infixExpression) {
         StringBuilder postfix = new StringBuilder();
         

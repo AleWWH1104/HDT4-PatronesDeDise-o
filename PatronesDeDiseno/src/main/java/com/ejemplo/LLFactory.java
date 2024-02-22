@@ -1,5 +1,9 @@
 package com.ejemplo;
-
+/**
+ * Fábrica para crear instancias de listas enlazadas.
+ *
+ * @param <T> el tipo de elementos que contendrán las listas enlazadas
+ */
 public class LLFactory<T> {
     
     public IList<T> createLList(String type) {

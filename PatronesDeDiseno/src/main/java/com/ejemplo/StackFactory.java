@@ -2,6 +2,11 @@ package com.ejemplo;
 
 import java.util.Scanner;
 
+/**
+ * Una fábrica que produce instancias de pilas basadas en el tipo especificado.
+ *
+ * @param <T> el tipo de elementos que contendrán las pilas creadas
+ */
 public class StackFactory<T> {
     Scanner scanner = new Scanner(System.in);
 

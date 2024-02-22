@@ -1,7 +1,15 @@
 package com.ejemplo;
-
+/**
+ * Implementación de una lista enlazada simple.
+ *
+ * @param <T> el tipo de elementos que contendrá la lista
+ */
 public class SinglyList<T> implements IList<T> {
-
+    /**
+     * Clase interna que representa un nodo de la lista enlazada simple.
+     *
+     * @param <T> el tipo de elemento que contendrá el nodo
+     */
     private class Node<T>{
 
         public T data;

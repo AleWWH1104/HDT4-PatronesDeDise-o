@@ -6,7 +6,17 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.io.File;
 
+/**
+ * Clase principal que ejecuta la aplicación de evaluación de expresiones postfix.
+ *
+ * @param <T> el tipo de elementos que contendrá la pila
+ */
 public class Main<T> {
+    /**
+     * Lee la expresión en notación infix desde un archivo.
+     *
+     * @return la expresión en notación infix leída desde el archivo
+     */
     public static String leerNotacion() {
         try {
             String filePath = "PatronesDeDiseno/src/main/datos.txt";
@@ -39,7 +49,12 @@ public class Main<T> {
             return "";
         }
     }
-    
+
+    /**
+     * Método principal que ejecuta la aplicación de evaluación de expresiones postfix.
+     *
+     * @param args argumentos de la línea de comandos (no se utilizan en este caso)
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Elija el tipo de stack que desea utilizar:");
