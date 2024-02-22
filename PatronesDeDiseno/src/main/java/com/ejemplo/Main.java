@@ -47,17 +47,9 @@ public class Main<T> {
             return;
         }
 
-        // Si el usuario eligió la opción 3, se le pide que seleccione el tipo de lista.
+        // Si el usuario eligió la opción 3, se le pide que seleccione el tipo de lista (SingleLinked o DoubleLinked).
         if (stackOp.equals("3")) {
             
-
-            String listOp = scanner.nextLine();
-            IList<Integer> list = stackFactory.createLList(listOp);
-
-            if (list == null) {
-                System.out.println("Opción no válida.");
-                return;
-            }
         }
 
 

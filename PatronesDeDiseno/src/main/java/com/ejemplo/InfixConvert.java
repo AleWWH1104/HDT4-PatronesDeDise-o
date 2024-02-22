@@ -13,33 +13,33 @@ public class InfixConvert<T> {
 
     public String infixToPostfix(String infixExpression) {
         StringBuilder postfix = new StringBuilder();
-        
+    
         for (char ch : infixExpression.toCharArray()) {
             if (Character.isLetterOrDigit(ch)) {
-                postfix.append(ch);
+                postfix.append(ch).append(' '); // Append space after each character
             } else if (ch == '(') {
                 stack.push((T) Character.valueOf(ch));
             } else if (ch == '^') {
                 stack.push((T) Character.valueOf(ch));
             } else if (ch == ')') {
                 while (!stack.isEmpty() && !isOpeningParenthesis(stack.peek())) {
-                    postfix.append(stack.pop());
+                    postfix.append(stack.pop()).append(' '); // Append space after each character
                 }
                 stack.pop(); // Pop the opening parenthesis
             } else {
                 // Operator
                 while (!stack.isEmpty() && getPrecedence(ch) <= getPrecedenceT(stack.peek())) {
-                    postfix.append(stack.pop());
+                    postfix.append(stack.pop()).append(' '); // Append space after each character
                 }
                 stack.push((T) Character.valueOf(ch));
             }
         }
-
+    
         while (!stack.isEmpty() && !isSpecialCharacter(stack.peek())) {
-            postfix.append(stack.pop());
+            postfix.append(stack.pop()).append(' '); // Append space after each character
         }
-
-        return postfix.toString();
+    
+        return postfix.toString().trim(); // Trim to remove trailing space
     }
 
     private boolean isOpeningParenthesis(T c) {
