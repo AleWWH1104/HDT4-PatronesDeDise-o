@@ -1,34 +1,49 @@
 package com.ejemplo;
-import java.util.Vector;
 
 public class vVector<T> implements IStack<T> {
 
-    Vector<T> vec = null;
+    private static final int DEFAULT_CAPACITY = 10;
+    private Object[] vector;
+    private int size;
 
-    public vVector(){
-        vec = new Vector<T>();
+    public vVector() {
+        vector = new Object[DEFAULT_CAPACITY];
+        size = 0;
     }
+
     @Override
     public void push(T item) {
-
-        vec.addElement(item);
+        ensureCapacity();
+        vector[size++] = item;
     }
 
     @Override
     public T pop() {
-        T e = vec.elementAt(vec.size() - 1);
-        vec.removeElement(vec.size() - 1);
-        return e;
+        if (isEmpty()) {
+            throw new IllegalStateException("El vector está vacío");
+        }
+        T element = (T) vector[--size];
+        vector[size] = null; // Limpiar referencia al elemento eliminado
+        return element;
     }
 
     @Override
     public T peek() {
-        return vec.elementAt(vec.size() - 1);
+        if (isEmpty()) {
+            throw new IllegalStateException("El vector está vacío");
+        }
+        return (T) vector[size - 1];
     }
 
     @Override
     public boolean isEmpty() {
-        return vec.size()==0;
+        return size == 0;
     }
-    
+
+    private void ensureCapacity() {
+        if (size == vector.length) {
+            int newCapacity = vector.length * 2;
+            vector = java.util.Arrays.copyOf(vector, newCapacity);
+        }
+    }
 }
