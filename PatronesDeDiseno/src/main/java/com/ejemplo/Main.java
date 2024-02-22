@@ -9,7 +9,7 @@ import java.io.File;
 public class Main<T> {
     public static String leerNotacion() {
         try {
-            String filePath = "PatronesDeDiseno\\src\\main\\datos.txt";
+            String filePath = "PatronesDeDiseno/src/main/datos.txt";
             File file = new File(filePath);
 
             if (!file.exists()) {
