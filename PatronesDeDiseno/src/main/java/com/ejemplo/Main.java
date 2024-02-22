@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class Main<T> {
     public static String leerNotacion() {
@@ -40,18 +41,26 @@ public class Main<T> {
         System.out.println("3. Lista ");
 
         String stackOp = scanner.nextLine();
-        IStack<Integer> stack = stackFactory.createStack(stackOp);
 
-        if (stack == null) {
-            System.out.println("Opción no válida.");
-            return;
+        if (stackOp.equals("3")){
+            IStack<Integer> stack = stackFactory.createStack("3");
+        }else{
+
+            IStack<Integer> stack = stackFactory.createStack(stackOp);
+            if (stack == null) {
+                System.out.println("Opción no válida.");
+                return;
+            }
         }
 
-        // Si el usuario eligió la opción 3, se le pide que seleccione el tipo de lista (SingleLinked o DoubleLinked).
-        if (stackOp.equals("3")) {
-            
-        }
+        System.out.println("Notacion");
+        System.out.println(leerNotacion());
+        System.out.println("Notacion");
 
-
+        InfixConvert<Character> converter = new InfixConvert<>();
+        String infixExpression = leerNotacion();
+        String postfixExpression = converter.infixToPostfix(infixExpression);
+        System.out.println("Infix: " + infixExpression);
+        System.out.println("Postfix: " + postfixExpression);
     }
 }
