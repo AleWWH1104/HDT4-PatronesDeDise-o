@@ -9,7 +9,7 @@ import java.io.File;
 public class Main<T> {
     public static String leerNotacion() {
         try {
-            String filePath = "/Users/alejandraayala/Desktop/EstructuraDatos/HDT4-PatronesDeDiseno/PatronesDeDiseno/src/main/datos.txt";
+            String filePath = "PatronesDeDiseno\\src\\main\\datos.txt";
             File file = new File(filePath);
 
             if (!file.exists()) {
